@@ -1,0 +1,181 @@
+<div class="container">
+	<div class="row">
+		<h2>Adding a movie!!</h2> 
+        
+        <form class="form-horizontal" name="form" ng-submit="submitMovie()">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Fill all the fields</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="firstName">Movie Title</label>  
+  <div class="col-md-4">
+  <input id="fname" name="mTitle" ng-model="movieform.title" placeholder="Insert movie title" class="form-control input-md" required type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Year</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mYear" ng-model="movieform.year" placeholder="Insert year" class="form-control input-md" required="required" type="number">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Rated</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mRated" ng-model="movieform.rated" placeholder="Insert rated" class="form-control input-md" required="required" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Released</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mReleased" ng-model="movieform.released" placeholder="Insert released date" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Runtime</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mRuntime" ng-model="movieform.runtime" placeholder="Insert runtime" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Genre</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mGenre" ng-model="movieform.genre" placeholder="Insert genre" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Director</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mDirector" ng-model="movieform.director" placeholder="Insert director" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Writer</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mWriter" ng-model="movieform.writer" placeholder="Insert writer" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Actors</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mActors" ng-model="movieform.actors" placeholder="Insert actors" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Plot</label>  
+  <div class="col-md-4">
+  <textarea id="lname" name="mPlot" ng-model="movieform.plot" placeholder="Insert plot" class="form-control input-md" type="text" rows="3"></textarea>
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Language</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mLanguage" ng-model="movieform.language" placeholder="Insert language" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Country</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mCountry" ng-model="movieform.country" placeholder="Insert country" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Awards</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mAwards" ng-model="movieform.awards" placeholder="Insert awards" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Poster</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mPoster" ng-model="movieform.poster" placeholder="Insert poster" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">MetaScore</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mMetaScore" ng-model="movieform.metascore" placeholder="Insert metascore" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Imdb Rating</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mimdbRating" ng-model="movieform.imdbRating" placeholder="Insert imdbRating" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Imdb Votes</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mimdbVotes" ng-model="movieform.imdbVotes" placeholder="Insert imdbVotes" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Imdb Id</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mimdbId" ng-model="movieform.imdbID" placeholder="Insert imdbId" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="lastName">Type</label>  
+  <div class="col-md-4">
+  <input id="lname" name="mType" ng-model="movieform.type" placeholder="Insert type" class="form-control input-md" type="text">
+  <span class="help-block"> </span>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"> </label>
+  <div class="col-md-4">
+    <input type="submit" class="btn btn-primary" value="Submit" />
+  </div>
+</div>
+
+
+
+</fieldset>
+</form>
+  
+	</div>
+</div>

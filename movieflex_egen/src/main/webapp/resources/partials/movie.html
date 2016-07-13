@@ -1,0 +1,90 @@
+
+<!-- Page Content -->
+<div class="container">
+
+	<!-- Page Heading/Breadcrumbs -->
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">
+				{{movie.title}} <small>{{movie.type}}</small>
+			</h1>
+			<ol class="breadcrumb">
+				<li><a href="#/">Home</a></li>
+				<li class="active">{{movie.language}}</li>
+				<li><a href="#/editmovie/{{movie.movieId}}" ng-show="globals.currentUser.role=='ADMIN'">Edit Movie</a></li>
+				<li><a href="#/deletemovie/{{movie.movieId}}" ng-show="globals.currentUser.role=='ADMIN'">Delete Movie</a></li>
+				<li></li>
+			</ol>
+		</div>
+	</div>
+	<!-- /.row -->
+
+	<!-- Portfolio Item Row -->
+	<div class="row">
+
+		<div class="col-md-8">
+			<div id="carousel-example-generic" class="carousel slide"
+				data-ride="carousel">
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img class="img-responsive" src="{{movie.poster}}" alt="">
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<h3>{{movie.genre}}</h3>
+			<p>{{movie.plot}}</p>
+			<h3>{{movie.actors}}</h3>
+			<ul>
+				<li>{{movie.year}}</li>
+				<li>{{movie.director}}</li>
+				<li>{{movie.released}}</li>
+				<li>{{movie.runtime}}</li>
+				<li>{{movie.awards}}</li>
+				<li>{{movie.imdbRating}}</li>
+				<li>{{movie.imdbVotes}}</li>
+				<li><a href="http://imdb.com/title/{{movie.imdbID}}">Checkout more at</a>
+
+			</ul>
+			<div class="col-md-4">
+				User Rating:<p>{{userrating}}</p>
+			User reviews:
+			<ul ng-repeat="rating in movie.ratings">
+				<li>{{rating.review}}</li>
+			</ul>
+			</div>
+			
+		</div>
+		
+		<div>
+			<form class="class="col-md-4"" name="reviewForm" ng-submit="submitRating()">
+				<div class="form-group">
+					Rating: <select ng-model="userchoice.rating" required>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					</div>
+					<div class="form-group">
+					 Review: <input type="text" name="review" ng-model="userchoice.review" required>
+					<button type="submit" >Submit</button>
+				</div>
+			</form>
+			</div>
+
+
+
+	</div>
+	<!-- /.row -->
+
+
+	<hr>
